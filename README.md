@@ -46,9 +46,9 @@ Below are several screenshots showing how the game looks during different stages
 
 These images help demonstrate the flow of the game and what players can expect while playing.
 
-<img src="StartTheGame.png" wide="50%" >
-<img src="gameTied.png"wide="50%">
-<img src="gameOWins.png"wide="50%">
+<img src="StartTheGame.jpg" wide="50%" >
+<img src="gameTied.jpg"wide="50%">
+<img src="gameOWins.jpg"wide="50%">
 
 ## Functions 
 
