@@ -1,0 +1,113 @@
+/* The Page layout */
+* {                               
+  box-sizing: border-box;          
+  margin: 0;                       
+  padding: 0;                      
+                    
+}
+
+/* The background, making the cell boxes in center  */
+body {
+  background: #ffffff;             
+  min-height: 100vh;               
+  display: flex;                  
+  flex-direction: column;          
+  align-items: center;             
+  justify-content: flex-start;     
+  padding-top: 50px;               
+  color: #1f2933;                 
+}
+
+/* Title */
+h1 {
+  font-size: 32px;                 
+  letter-spacing: 0.04em;          
+  margin-bottom: 24px;             
+}
+
+/* Status text "X's turn"*/
+#status {
+  font-size: 18px;                 
+  margin-top: 18px;                
+  margin-bottom: 16px;            
+}
+
+/* --- Board --- */
+.board {
+  display: grid;                   
+  grid-template-columns: repeat(3, 1fr);  
+  gap: 6px;                       
+  margin: 0 auto;                 
+  width: 300px;                    
+}
+
+/* Each cell Boxes  */
+.cell {
+  width: 100px;                   
+  height: 100px;                   
+  background: #e2eafb;             
+  border: 1px solid #d2d6dc;       
+  border-radius: 4px;             
+  display: flex;                   
+  align-items: center;             
+  justify-content: center;         
+  font-size: 46px;                 
+  font-weight: 600;                
+  cursor: pointer;                 
+  box-shadow: 0 2px 4px rgba(15, 23, 42, 0.06); 
+  transition:
+    background 0.18s ease,         /* Smooth hover background change */
+    box-shadow 0.18s ease,         /* Smooth shadow change */
+    transform 0.12s ease;          /* Smooth lift animation */
+}
+
+/* When hoving over the cells the colours will change */
+.cell:hover {
+  background: #c4eeff;            
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08); 
+  transform: translateY(-1px);    
+}
+
+/* the colour of the X is red */
+.cell.x {
+  color: #e11d48;                  
+}
+
+/* The colour of the O is black */
+.cell.o {
+  color: #000000;                  
+}
+
+/* Disable interaction when game ends */
+.cell.disabled {
+  cursor: default;                
+  opacity: 0.7;                    
+  box-shadow: none;                
+  transform: none;                 
+}
+
+/* Restart button*/
+#resetBtn {
+  margin-top: 10px;                
+  padding: 8px 26px;              
+  font-size: 16px;                
+  border-radius: 999px;           
+  border: 1px solid #d8dce6;      
+  background: #ffffff;             
+  cursor: pointer;                 
+  transition:
+    background 0.18s ease,         /* Smooth background change */
+    box-shadow 0.18s ease,         /* Smooth shadow change */
+    transform 0.12s ease;          /* Smooth lift effect */
+}
+
+#resetBtn:hover {
+  background: #6aaff8;             
+  box-shadow: 0 3px 8px rgba(15, 23, 42, 0.12); 
+  transform: translateY(-1px);     /* Lift effect */
+}
+
+#resetBtn:active {
+  transform: translateY(0);        /* Remove lift when clicked */
+  box-shadow: none;                /* Remove shadow */
+}
