@@ -19,6 +19,8 @@ for (let i = 0; i < squares.length; i++) {
       return;
     }
     squares[i].textContent = currentPlayer;
+    squares[i].classList.add(currentPlayer === "X" ? "x" : "o");
+    
     if (checkWin(currentPlayer)) {
       endMessage.textContent = `Game over! ${currentPlayer} wins!`;
       return;
@@ -31,6 +33,7 @@ for (let i = 0; i < squares.length; i++) {
     endMessage.textContent = `${currentPlayer}'s turn!`;
   });
 }
+
 
 
 //list of all possible winning combinations 
@@ -73,15 +76,13 @@ function checkTie() {
 }
 
 //function to reset the game back to the starting state
-function restartButton() {
-    //clear each square on the board
-    squares.forEach(square => {
-        square.textContent = "";
-        square.classList.remove("win");
-    });
+function restartButton() { 
+    Array.from(squares).forEach(square => { 
+        square.textContent = ""; 
+        square.classList.remove("win"); }); 
+        
+        currentPlayer = players[0]; 
+        endMessage.textContent = `${currentPlayer}'s turn!`;
+        }
 
-    //reset to starting player 
-    currentPlayer = players[0];
-    //update the message displayed to the user
-    endMessage.textContent = `${currentPlayer}'s turn!`;
-}
+document.getElementById("resetBtn").addEventListener("click", restartButton);  

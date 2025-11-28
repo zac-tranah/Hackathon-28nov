@@ -42,7 +42,7 @@ h1 {
 }
 
 /* Each cell Boxes  */
-.cell {
+.square {
   width: 100px;                   
   height: 100px;                   
   background: #e2eafb;             
@@ -62,24 +62,24 @@ h1 {
 }
 
 /* When hoving over the cells the colours will change */
-.cell:hover {
+.square:hover {
   background: #c4eeff;            
   box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08); 
   transform: translateY(-1px);    
 }
 
 /* the colour of the X is red */
-.cell.x {
-  color: #e11d48;                  
+.square.x {
+  color: #cd0808;                  
 }
 
 /* The colour of the O is black */
-.cell.o {
-  color: #000000;                  
+.square.o {
+  color: #2602ee;                  
 }
 
 /* Disable interaction when game ends */
-.cell.disabled {
+.square.disabled {
   cursor: default;                
   opacity: 0.7;                    
   box-shadow: none;                
