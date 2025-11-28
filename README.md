@@ -52,23 +52,23 @@ These images help demonstrate the flow of the game and what players can expect w
 
 ## Functions 
 
-1. endMessage (H2 Element Creation)
-Creates a new <h2> element to show whose turn it is or who won the game.
+- endMessage (H2 Element Creation)
+Creates a new (h2) element to show whose turn it is or who won the game.
 
-2. Click Event on Each Square
+- Click Event on Each Square
 Listens for a click on each square and handles placing X or O, checking win/tie, and switching turns.
 
-3. winning_combinations
+- winning_combinations
 Stores all eight possible ways a player can win in Tic Tac Toe (rows, columns, diagonals).
 
-4. checkWin(currentPlayer)
+- checkWin(currentPlayer)
 Checks whether the current player has three matching symbols in any winning combination.
 
-5. checkTie()
+- checkTie()
 Checks if the board is completely full and no player has won, meaning the game ends in a tie.
 
-6. restartButton()
+- restartButton()
 Clears the board, removes winning highlights, and resets the game back to X’s turn.
 
-7. document.getElementById("resetBtn").addEventListener("click", restartButton)
+- document.getElementById("resetBtn").addEventListener("click", restartButton)
 Connects the Reset button in HTML so that clicking it restarts the game.
